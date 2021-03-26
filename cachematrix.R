@@ -1,5 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
+## By using function makeCacheMatrix and cachesolve together
+##This function could get a matrix and evaluate its inverse
 
 ## set matrix and let I be the inverse of the matrix
 
@@ -25,16 +25,16 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## get matrix from function make Cachematrix and get its inverse
 
 cacheSolve <- function(x, ...) {
     I <- x$getinverse()
-    if(!is.null(I)){
+    if (!is.null(I)) {
         message("getting cached data")
         return(I)
     }
     data <- x$get()
-    I <- solve(data,...)
+    I <- solve(data, ...)
     x$setinverse(I)
     I
     ## Return a matrix that is the inverse of 'x'
